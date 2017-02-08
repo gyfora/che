@@ -59,13 +59,24 @@ cmd_lifecycle() {
     fi
   fi
 
+  local PRE_COMMAND_STATUS=0
   if [ -n "$(type -t $PRE_COMMAND)" ] && [ "$(type -t $PRE_COMMAND)" = function ]; then
     eval $PRE_COMMAND "$@"
+    PRE_COMMAND_STATUS=$?
   fi
 
   eval $COMMAND "$@"
+  local COMMAND_STATUS=$?
 
+  local POST_COMMAND_STATUS=0
   if [ -n "$(type -t $POST_COMMAND)" ] && [ "$(type -t $POST_COMMAND)" = function ]; then
     eval $POST_COMMAND "$@"
+    POST_COMMAND_STATUS=$?
+  fi
+
+  if [[ POST_COMMAND_STATUS -ne 0 ]]; then
+    return ${POST_COMMAND_STATUS};
+  else
+    return ${COMMAND_STATUS};
   fi
 }
