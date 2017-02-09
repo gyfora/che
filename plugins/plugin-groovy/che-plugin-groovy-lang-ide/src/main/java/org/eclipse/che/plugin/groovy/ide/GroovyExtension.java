@@ -29,7 +29,6 @@ import com.google.inject.name.Named;
 /**
  * Python extension entry point.
  *
- * @author Valeriy Svydenko
  */
 @Extension(title = "Groovy")
 public class GroovyExtension {

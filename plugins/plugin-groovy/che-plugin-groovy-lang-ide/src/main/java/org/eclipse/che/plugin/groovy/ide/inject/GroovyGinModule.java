@@ -35,7 +35,7 @@ public class GroovyGinModule extends AbstractGinModule {
     @Provides
     @Singleton
     @Named("GroovyFileType")
-    protected FileType providePythonFile() {
+    protected FileType provideGroovyFile() {
         return new FileType(GroovyResources.INSTANCE.groovyFile(), GROOVY_EXT);
     }
 
