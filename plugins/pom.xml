@@ -43,6 +43,7 @@
         <module>plugin-dashboard</module>
         <module>plugin-gwt</module>
         <module>plugin-python</module>
+        <module>plugin-groovy</module>
         <module>plugin-svn</module>
         <module>plugin-cpp</module>
         <module>plugin-csharp</module>

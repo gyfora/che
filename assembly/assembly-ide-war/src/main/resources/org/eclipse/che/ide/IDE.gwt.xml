@@ -67,6 +67,7 @@
     <inherits name='org.eclipse.che.plugin.php.Php'/>
     <inherits name='org.eclipse.che.plugin.composer.Composer'/>
     <inherits name='org.eclipse.che.plugin.python.Python'/>
+    <inherits name='org.eclipse.che.plugin.groovy.Groovy'/>
     <inherits name='org.eclipse.che.plugin.java.plain.PlainJava'/>
     <inherits name='org.eclipse.che.plugin.nodejs.NodeJs'/>
     <inherits name='org.eclipse.che.plugin.docker.client.dto.Dto'/>
